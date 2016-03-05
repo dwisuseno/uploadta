@@ -1,0 +1,60 @@
+<?php
+use kartik\grid\GridView;
+use kartik\builder\TabularForm;
+use yii\data\ArrayDataProvider;
+use yii\helpers\Html;
+use yii\widgets\Pjax;
+
+Pjax::begin();
+$dataProvider = new ArrayDataProvider([
+    'allModels' => $row,
+]);
+echo TabularForm::widget([
+    'dataProvider' => $dataProvider,
+    'formName' => 'Employeehashrdata',
+    'checkboxColumn' => false,
+    'actionColumn' => false,
+    'attributeDefaults' => [
+        'type' => TabularForm::INPUT_TEXT,
+    ],
+    'attributes' => [
+        'employee_id' => [
+            'label' => 'Employee',
+            'type' => TabularForm::INPUT_WIDGET,
+            'widgetClass' => \kartik\widgets\Select2::className(),
+            'options' => [
+                'data' => \yii\helpers\ArrayHelper::map(\app\models\Employee::find()->orderBy('employee_id')->asArray()->all(), 'id', 'employee_id'),
+                'options' => ['placeholder' => 'Choose Employee'],
+            ],
+            'columnOptions' => ['width' => '200px']
+        ],
+        'hrdata_id' => [
+            'label' => 'Hrdata',
+            'type' => TabularForm::INPUT_WIDGET,
+            'widgetClass' => \kartik\widgets\Select2::className(),
+            'options' => [
+                'data' => \yii\helpers\ArrayHelper::map(\app\models\Hrdata::find()->orderBy('employee_id')->asArray()->all(), 'id', 'employee_id'),
+                'options' => ['placeholder' => 'Choose Hrdata'],
+            ],
+            'columnOptions' => ['width' => '200px']
+        ],
+        'del' => [
+            'type' => TabularForm::INPUT_STATIC,
+            'label' => '',
+            'value' => function($model, $key) {
+                return Html::a('<i class="glyphicon glyphicon-trash"></i>', '#', ['title' =>  'Delete', 'onClick' => 'delRowEmployeehashrdata(' . $key . '); return false;', 'id' => 'employeehashrdata-del-btn']);
+            },
+        ],
+    ],
+    'gridSettings' => [
+        'panel' => [
+            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . 'Employeehashrdata',
+            'type' => GridView::TYPE_INFO,
+            'before' => false,
+            'footer' => false,
+            'after' => Html::button('<i class="glyphicon glyphicon-plus"></i>' . 'Add Row', ['type' => 'button', 'class' => 'btn btn-success kv-batch-create', 'onClick' => 'addRowEmployeehashrdata()']),
+        ]
+    ]
+]);
+Pjax::end();
+?>

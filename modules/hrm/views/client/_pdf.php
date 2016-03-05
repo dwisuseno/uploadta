@@ -1,0 +1,60 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\DetailView;
+use kartik\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $model app\modules\hrm\models\Client */
+
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Client', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="client-view">
+
+    <div class="row">
+        <div class="col-sm-9">
+            <h2><?= 'Client'.' '. Html::encode($this->title) ?></h2>
+        </div>
+    </div>
+
+    <div class="row">
+<?php 
+    $gridColumn = [
+        ['attribute' => 'id', 'hidden' => true],
+        'client_code',
+        'client_name',
+    ];
+    echo DetailView::widget([
+        'model' => $model,
+        'attributes' => $gridColumn
+    ]); 
+?>
+    </div>
+    
+    <div class="row">
+<?php
+    $gridColumnCompany = [
+        ['class' => 'yii\grid\SerialColumn'],
+        ['attribute' => 'id', 'hidden' => true],
+        [
+            'attribute' => 'client.id',
+            'label' => 'Client',
+        ],
+        'company_code',
+        'company_name',
+    ];
+    echo Gridview::widget([
+        'dataProvider' => $providerCompany,
+        'pjax' => true,
+        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container']],
+        'panel' => [
+        'type' => GridView::TYPE_PRIMARY,
+        'heading' => '<h3 class="panel-title"><i class="glyphicon glyphicon-book"></i>  ' . Html::encode('Company'.' '. $this->title) . ' </h3>',
+        ],
+        'columns' => $gridColumnCompany
+    ]);
+?>
+    </div>
+</div>
