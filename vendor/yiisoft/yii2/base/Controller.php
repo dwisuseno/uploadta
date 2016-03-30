@@ -512,4 +512,26 @@ class Controller extends Component implements ViewContextInterface
 
         return $path;
     }
+
+    public function test(){
+        return "Hello";
+    }
+
+    public function generateCode($prefix,$suffix){
+        $hasil;
+        if($suffix == ""){
+            $hasil = $prefix."0001";
+        } else if($suffix < 9){
+            $new = $suffix + 1; 
+            $hasil = $prefix."000".$new;
+        } else if($suffix < 99){
+            $new = $suffix + 1; 
+            $hasil = $prefix."00".$new;
+        } else if($suffix < 999){
+            $new = $suffix + 1; 
+            $hasil = $prefix."0".$new;
+        }
+
+        return $hasil;
+    }
 }

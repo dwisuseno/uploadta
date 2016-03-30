@@ -19,6 +19,7 @@ a {
     padding: 0 15px;
     min-height: 568px;
     background-color: #f1f1f1;
+    bottom: 0;
 }
 
 @media(min-width:768px) {
@@ -29,7 +30,6 @@ a {
         border-left: 1px solid #e7e7e7;
     }
 }
-
 
 
 .sidebar .sidebar-nav.navbar-collapse {

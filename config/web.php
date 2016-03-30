@@ -53,14 +53,15 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
         'db2' => require(__DIR__ . '/db2.php'),
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+        
+        // 'urlManager' => [
+        //     'enablePrettyUrl' => true,
+        //     'showScriptName' => false,
+        //     'rules' => [
+        //         ['class' => 'yii\rest\UrlRule', 'controller' => 'hrm-employee'],
+        //     ],
+        // ],
+        
     ],
     'params' => $params,
 ];

@@ -21,7 +21,10 @@
         "mootensai/yii2-enhanced-gii": "dev-master",
         "kartik-v/yii2-widget-sidenav": "*",
         "miloschuman/yii2-highcharts-widget": "*",
-        "mdmsoft/yii2-admin": "dev-master"
+        "mdmsoft/yii2-admin": "dev-master",
+        "mootensai/yii2-enhanced-gii": "*",
+        "mdmsoft/yii2-upload-file": "~1.2",
+        "janisto/yii2-timepicker": "*",
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

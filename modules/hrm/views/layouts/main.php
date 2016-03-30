@@ -28,7 +28,7 @@ AppAsset::register($this);
     <?php NavBar::begin();NavBar::end(); ?>
     </div>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -46,38 +46,51 @@ AppAsset::register($this);
                 <ul class="nav" id="side-menu">
                     <li><a href="index.php?r=hrm/dashboard"><i class="glyphicon glyphicon-dashboard"></i> Dashboard</a></li>
                     <li>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-user"></i> Employee<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-user"></i> Recruitement and Hiring<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
                         <ul id="collapseTwo" class="panel-collapse collapse nav nav-second-level" role="tabpanel">
-                            <li><a href="index.php?r=hrm/employee">Employee</a></li>
-                            <li><a href="index.php?r=hrm/bank-account">Bank Account</a></li>
-                            <li><a href="index.php?r=hrm/org">Organizational Structure</a></li>
-                            <li><a href="index.php?r=hrm/personnel">Personnel Structure</a></li>
-                            <li><a href="index.php?r=hrm/skill">Skill</a></li>
+                            <li><a href="index.php?r=hrm/hrm-job-requisition">Job Requisition</a></li>
+                            <li><a href="index.php?r=hrm/hrm-candidate">Candidate</a></li>
+                            <li><a href="index.php?r=hrm/hrm-hire-candidate">Hire Candidate</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-send"></i> Key Performance Indicator<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-send"></i> Assignment<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
                         <ul id="collapseThree" class="panel-collapse collapse nav nav-second-level" role="tabpanel">
-                            <li><a href="index.php?r=hrm/kra">Key Result Area</a></li>
-                            <li><a href="index.php?r=hrm/kpi">Create KPI</a></li>
-                            <li><a href="index.php?r=hrm/sasaran-strategis">Sasaran Strategis</a></li>
-                            <li><a href="index.php?r=hrm/tasks">Tasks</a></li>
+                            <li><a href="index.php?r=hrm/hrm-bank-account">Bank Account</a></li>
+                            <li><a href="index.php?r=hrm/hrm-skill">Skill</a></li>
+                            <li><a href="index.php?r=hrm/hrm-level">Level</a></li>
+                            <li><a href="index.php?r=hrm/hrm-shift">Shift</a></li>
+                            <li><a href="index.php?r=hrm/hrm-employee">Employee</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="glyphicon glyphicon-bookmark"></i> Payroll<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="glyphicon glyphicon-bookmark"></i> Training<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
                         <ul id="collapseFour" class="panel-collapse collapse nav nav-second-level" role="tabpanel">
-                            <li><a href="index.php?r=hrm/payroll">Create Payroll</a></li>
-                            <li><a href="index.php?r=hrm/salary">Salary</a></li>
-                            <li><a href="index.php?r=hrm/family-allowance">Family Allowance</a></li>
-                            <li><a href="index.php?r=hrm/work-exp">Work Experience</a></li>
+                            <li><a href="index.php?r=hrm/hrm-training">Training</a></li>
+                            <li><a href="index.php?r=hrm/hrm-employee">Update Level</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-list-alt"></i> Reports<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-stats"></i> Target A Goal<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
                         <ul id="collapseOne" class="panel-collapse collapse nav nav-second-level" role="tabpanel">
-                            <li class="border-bot"><a href="index.php?r=hrm/client">Salary</a></li>
-                            <li><a href="index.php?r=hrm/company">Employee</a></li>
+                            <li class="border-bot"><a href="index.php?r=hrm/hrm-strategic-target">Strategic Target</a></li>
+                            <li><a href="index.php?r=hrm/hrm-key-result-area">Key Result Area</a></li>
+                            <li><a href="index.php?r=hrm/hrm-key-performance-indicator">Key Performance Indicator</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-tag"></i> Payroll<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
+                        <ul id="collapseFive" class="panel-collapse collapse nav nav-second-level" role="tabpanel">
+                            <li class="border-bot"><a href="index.php?r=hrm/hrm-family-allowance">Family Allowance</a></li>
+                            <li class="border-bot"><a href="index.php?r=hrm/hrm-work-exp">Working Experience</a></li>
+                            <li class="border-bot"><a href="index.php?r=hrm/hrm-salary">Salary</a></li>
+                            <li class="border-bot"><a href="index.php?r=hrm/hrm-payroll">Payroll</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseOne"><i class="glyphicon glyphicon-remove-sign"></i> Decruiting<span class="glyphicon glyphicon-chevron-right go-right"></span></a>
+                        <ul id="collapseSix" class="panel-collapse collapse nav nav-second-level" role="tabpanel">
+                            <li class="border-bot"><a href="index.php?r=hrm/hrm-employee">Update Employee</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -88,6 +101,7 @@ AppAsset::register($this);
     </nav>
 
     <div id="page-wrapper">
+        <br><br>
         <div class="top-limit">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -101,9 +115,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; Enterprise Resource Planning <?= date('Y') ?></p>
-
-        
+        <p class="pull-left">&copy; Enterprise Resource Planning <?= date('Y') ?></p>  
     </div>
 </footer>
 

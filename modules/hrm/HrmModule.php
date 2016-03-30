@@ -10,6 +10,8 @@ class HrmModule extends \yii\base\Module
     {
         parent::init();
 
+        $this->layout = 'main.php';
+
         // $this->params['foo'] = 'bar';
 
         // custom initialization code goes here
